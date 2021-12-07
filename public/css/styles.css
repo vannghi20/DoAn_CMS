@@ -160,3 +160,120 @@
         top: -7px;
     }
 }
+.p-list-container {
+    border-top: 1px solid #edeef2;
+    position: relative;
+    margin-right: -2px;
+}
+.flex-wrap {
+    -ms-flex-wrap: wrap!important;
+    flex-wrap: wrap!important;
+}
+.d-flex {
+    display: -ms-flexbox!important;
+    display: flex!important;
+}
+.p-list-container .p-item {
+    width: 20%;
+    border: 1px solid #edeef2;
+    border-left: 0;
+    border-top: 0;
+}
+.p-item {
+    padding: 10px 12px 15px 12px;
+}
+.p-item .p-img {
+    display: block;
+    position: relative;
+    padding-bottom: 200px;
+    margin-bottom: 5px;
+}
+
+.p-text a{
+    color: #222;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    outline: none;
+    background-color: transparent;
+    
+}
+.fit-img {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.p-item .p-name {
+    display: block;
+    font-size: 13px;
+    overflow: hidden;
+}
+.p-item .p-name h3 {
+    font-size: inherit;
+    line-height: inherit;
+    margin: inherit;
+    font-weight: inherit;
+}   
+.p-item .p-discount {
+    background: url(https://www.anphatpc.com.vn/template/anphat_2020v2/images/icon-discount.png) no-repeat;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.p-item .price-container {
+    position: relative;
+    margin: 6px 0;
+    height: 45px;
+}
+.option .row{
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.edit{
+    background-color: #2f80ed;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 7px 5px;
+    text-align: center;
+    margin: 3%;
+    width: 48.5%;
+}
+.delete{
+    background-color: #e60606;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 7px 5px;
+    text-align: center;
+    margin: 3%;
+    width: 48.5%;
+}
+.col-md-6>a>i{
+    color:white;
+}

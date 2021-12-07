@@ -10,8 +10,9 @@ class BankModel extends BaseModel {
 
         return $bank;
     }
-    public function findBankNew() {
-        $sql = 'SELECT MAX(id) FROM `bank`';
+    public function Bank() {
+        $sql = 'SELECT `banks`.`id`,`banks`.`user_id`,`users`.`fullname`, `banks`.`cost`, `banks`.`version` 
+        FROM `banks` INNER JOIN `users` WHERE `banks`.`user_id` = `users`.`id`';
         $bank = $this->select($sql);
         return $bank;
     } 
@@ -71,14 +72,16 @@ class BankModel extends BaseModel {
     public function getBanks($params = []) {
         //Keyword
         if (!empty($params['keyword'])) {
-            $sql = 'SELECT * FROM banks WHERE name LIKE "%' . $params['keyword'] .'%"';
-
+            $sql = 'SELECT `banks`.`id`,`banks`.`user_id`,`users`.`fullname`, `banks`.`cost`, `banks`.`version` 
+            FROM `banks` INNER JOIN `users` WHERE `banks`.`user_id` = `users`.`id` 
+            AND name LIKE "%' . $params['keyword'] .'%"';
             //Keep this line to use Sql Injection
             //Don't change
             //Example keyword: abcef%";TRUNCATE banks;##
             $banks = self::$_connection->multi_query($sql);
         } else {
-            $sql = 'SELECT * FROM banks';
+            $sql = 'SELECT `banks`.`id`,`banks`.`user_id`,`users`.`fullname`, `banks`.`cost`, `banks`.`version` 
+            FROM `banks` INNER JOIN `users` WHERE `banks`.`user_id` = `users`.`id`';
             $banks = $this->select($sql);
         }
 
